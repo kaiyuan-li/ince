@@ -1,0 +1,42 @@
+{
+  "name": "docker-python-sandbox",
+  "version": "0.0.7",
+  "description": "A docker-based sandbox to execute untrusted python code",
+  "main": "./lib/Sandbox",
+  "scripts": {
+    "test": "./scripts/run_tests.sh unit integration",
+    "test-integration": "./scripts/run_tests.sh integration",
+    "test-unit": "./scripts/run_tests.sh unit",
+    "start": "node app.js",
+    "clean": "docker stop $(docker ps -q) && rm -rf tmp",
+    "cleanAndRun": "docker stop $(docker ps -q) && rm -rf tmp && node --harmony_destructuring app.js",
+    "debug": "node debug app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophetd/docker-python-sandbox-v2.git"
+  },
+  "author": "Christophe Tafani-Dereeper <christophe@tafani-dereeper.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christophetd/docker-python-sandbox-v2/issues"
+  },
+  "homepage": "https://github.com/christophetd/docker-python-sandbox-v2#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "babel-core": "^6.26.0",
+    "chai": "^4.1.2",
+    "dockerode": "^3.2.1",
+    "fs-extra": "^0.26.7",
+    "lodash": "^4.8.2",
+    "mocha": "^4.0.1",
+    "proxyquire": "^1.8.0",
+    "request": "^2.70.0",
+    "sinon": "^4.1.2",
+    "uuid": "^3.0.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
