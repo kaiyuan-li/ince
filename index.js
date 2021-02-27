@@ -1,11 +1,12 @@
 var express = require('express');
+var cors = require('cors');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var child_process = require('child_process');
 var _ = require('underscore');
 let Sandbox = require('./lib/Sandbox')
 
-const poolSize = 2
+const poolSize = 5
 let mySandbox = new Sandbox({ poolSize })
 
 mySandbox.initialize(err => {
@@ -16,6 +17,7 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
+app.use(cors())
 app.use(bodyParser.json());
 
 app.post('/', function (req, res) {

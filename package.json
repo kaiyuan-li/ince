@@ -26,6 +26,7 @@
     "async": "^2.0.0-rc.3",
     "babel-core": "^6.26.0",
     "chai": "^4.1.2",
+    "cors": "^2.8.5",
     "dockerode": "^3.2.1",
     "express": "^4.17.1",
     "fs-extra": "^0.26.7",
