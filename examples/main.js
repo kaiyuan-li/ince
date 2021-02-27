@@ -1,5 +1,5 @@
 const { random } = require('lodash');
-let Sandbox = require('./lib/Sandbox')
+let Sandbox = require('../lib/Sandbox')
 
 const poolSize = 2
 let mySandbox = new Sandbox({poolSize})

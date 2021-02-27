@@ -27,6 +27,7 @@
     "babel-core": "^6.26.0",
     "chai": "^4.1.2",
     "dockerode": "^3.2.1",
+    "express": "^4.17.1",
     "fs-extra": "^0.26.7",
     "lodash": "^4.8.2",
     "mocha": "^4.0.1",
